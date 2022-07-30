@@ -1,0 +1,30 @@
+# Linux_Programming_Interfaces
+Exersises from Linux Programming Interfaces Book
+
+1- A signal is a notification that some kind of event has occurred, and may be sent to a
+process by the kernel, by another process(SIGUSR1, SIGUSR2), or by itself(by raise(<signal>)/ kill(<signal>, getpid()). 
+There is a range of standard signal types, each of which has a unique number and purpose.
+
+2- By default, a signal either is ignored, terminates a process (with or without a core dump), stops a running process, or restarts a stopped process. 
+=> The particular default action depends on the signal type.
+
+
+3- A program can use signal() or sigaction() to explicitly ignore a signal or to establish a programmer-defined 
+signal handler function that is invoked when the signal is delivered.
+=> For portability reasons,establishing a signal handler is best performed using sigaction().
+
+
+4- A process (with suitable permissions) can send a signal to another process using kill().
+
+5- Sending the null signal (0) is a way of determining if a particular process ID is in use.
+
+6- Each process has a signal mask, which is the set of signals whose delivery is currently blocked.
+
+7- Signals can be added to and removed from the signal mask using sigprocmask().
+
+8- If a signal is received while it is blocked, then it remains pending until it is unblocked.
+
+9- Standard signals can’t be queued; that is, a signal can be marked as pending (and thus later delivered) only once.
+
+
+
